@@ -42,13 +42,13 @@ function (pixelCount) {
   var h = width/2-0.5
   var hgap = h+gap
   var R = Math.sqrt(3*h*h)
+  map = map.concat(side([-1, 2, 0], [-h, -h, -hgap]))
   map = map.concat(side([0, 2, -1], [hgap, -h, -h]))
-  map = map.concat(side([2, 0, -1], [-h, -hgap, -h]))
-  map = map.concat(side([0, -2, -1], [-hgap, -h, -h]))
   map = map.concat(side([-2, 0, -1], [-h, hgap, -h]))
-  map = map.concat(side([-2, 1, 0], [-h, -h, hgap]))
-  // Currently have 5 sides in place. When the 6th side is added, uncomment the following
-  //map = map.concat(side([-2,1,0]),[-h,-h,-hgap])))
+  map = map.concat(side([0, -2, -1], [-hgap, -h, -h]))
+  map = map.concat(side([2, 0, -1], [-h, -hgap, -h]))
+  map = map.concat(side([-1,-2,0],[-h,-h,hgap]))
+
   for (i = 0; i < pixelCount; i++) {
     sc = cartesianToSpherical(map[i][0],map[i][1],map[i][2])
     cc = sphericalToCartesian(R, sc[1], sc[2])
