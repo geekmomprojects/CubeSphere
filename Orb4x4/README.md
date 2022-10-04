@@ -1,6 +1,14 @@
-To make a an LED orb based on 4x4 matrices print each of the STL files in this directory in the quantities listed in the name. 
+# Cube Orb 4x4
+ ![4x4Orb Image](/Pictures/Illuminated4x4.jpg)
 
-Everything should be held together with 5mm M2 flathead (*important*) screws and nuts.
+Please note that this is NOT a detailed tutorial. I have included as much information as I can to help others build
+this project, but the design may still evolve, and there is likely room for improvement. It is a challenging build
+because the space inside the matrix cube does not leave much room for soldering or electronics. Careful wire
+management and good soldering skills will be required.
+
+To make a an LED orb based on 4x4 matrices print each of the STL files in this directory in the quantities listed in the name. You can buy standard 4x4 WS2812 LED matrices on Amazon or AliExpress. This design is intended for matrices taht are approximately 30mm square with 4 mounting holes spaced about 15mm apart. See the [!Pictures](/Pictures) folder for images showing how the interior supports should hold the matrices together.
+
+Everything should be secured together with 5mm M2 flathead (*important*) screws and nuts.
 
 The magnet holders will latch the body of the cube to the lid, using cylindrical magnets with 1/4" diameter and 1/8" height. I designed the magnet holders to work with these countersunk magnet pairs from K&J magnetics (https://www.kjmagnetics.com/proddetail.asp?prod=R422CS-P-N52&cat=15f), with two pair of magnets per cube. The K&J magnets can be held in place with 5mm or 6mm (better) M2 screws and nuts. However, you can also probably buy standard 1/4" diameter, 1/8" height disk magnets and simply glue them into the holders with superglue. I haven't tried it, but I see no reason it shouldn't work.
 
