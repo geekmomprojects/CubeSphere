@@ -7,4 +7,4 @@ The sphere consists of 6 identical 3D printed pieces placed over the sides of an
 
 Currently the assembly is held together with string wrapped around the parts of the shell to hold them against the matrices.
 
-![Partially completed CubeSphere](./Pictures/CubeSphere.jpg)
+![Partially completed CubeSphere](./Pictures/Illuminated8x8.jpg)
