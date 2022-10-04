@@ -1,5 +1,5 @@
 # Cube Orb 4x4
- ![4x4Orb Image](/Pictures/Illuminated4x4.jpg)
+<img src="https://github.com/geekmomprojects/CubeSphere/blob/main/Orb4x4/Pictures/Illuminated4x4.jpg" width="300">
 
 Please note that this is NOT a detailed tutorial. I have included as much information as I can to help others build
 this project, but the design may still evolve, and there is likely room for improvement. It is a challenging build
