@@ -1,3 +1,12 @@
+// Maps the pixel locations of the cube sphere (an LED cube inscribed inside a translucent
+// sphere which pipes the LED light out to the sphere's surface). Cube side length (in pixels)
+// is "width."
+// Most of this algorithm is lifted directly from the Pixelblaze mapper code for a walled
+// cube by Ben Henke (see https://electromage.com/intro_to_mapping). The coordinates are
+// mapped to the surface of the sphere by generating Cartesian coordinates for the cube,
+// converting pixel coordinates to spherical values, and then setting rho for each pixel
+// to the radius of the circumscribed sphere while retaining theta and phi, then converting
+// back to Cartesian coordinates.
 function (pixelCount) {
   width = 8
 
