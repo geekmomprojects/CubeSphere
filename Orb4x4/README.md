@@ -15,7 +15,7 @@ For this build, you will need the following materials:
 - Super glue to attach tiles to the shells (Gorilla Glue Super Glue Gel highly recommended)
 - Wires/solder to connect the matrices/controller/battery
 - (4x) 1/4" by 1/8" disk magnets. Read paragraph below on the magnetic connectors for specifics
-- 2mm wide double-sided tape (e.g. [https://www.amazon.com/gp/product/B019OQ4Z10/](https://www.amazon.com/gp/product/B019OQ4Z10/)
+- 2mm wide double-sided tape (e.g. [https://www.amazon.com/gp/product/B019OQ4Z10/](https://www.amazon.com/gp/product/B019OQ4Z10/))
 
 Start by printing each of the STL files in the [Design directory](./Design/) in the quantities included in the filename. You can buy standard 4x4 WS2812 LED matrices on Amazon or AliExpress. This design is intended for matrices that are approximately 30mm square with 4 mounting holes spaced about 15mm apart. See the [Pictures directory](/Pictures)  for images showing how the 3D printed connectors attach the matrices together.
 
