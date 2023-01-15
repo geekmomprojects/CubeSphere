@@ -67,6 +67,6 @@ bubbles = Bubbles(orb.pixels, orb.spher, imu, color=RED)
 rainbow_sparkle = RainbowSparkle(pixels, speed = 0.075, step=10, period=20, num_sparkles = 30, background_brightness = 0)
 
 while True:
-    #tilt.animate()
+    tilt.animate()
     #rainbow_sparkle.animate()
-    bubbles.animate()
+    #bubbles.animate()
