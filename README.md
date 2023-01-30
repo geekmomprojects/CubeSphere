@@ -2,7 +2,7 @@
 
 Design files and code for a 3D printed shell to transform an LED cube to a sphere
 
-<img src="https://github.com/geekmomprojects/CubeSphere/blob/main/Orb8x8/WS2812/Pictures/Illuminated8x8.jpg" height=300>  |  <img src="https://github.com/geekmomprojects/CubeSphere/blob/main/Orb8x8/WS2812/Pictures/Opened8x8.jpg" height=300>
+<img src="https://github.com/geekmomprojects/CubeSphere/blob/main/Orb8x8/WS2812/Pictures/CubeWithOrb8x8.jpg" height=300>  |  <img src="https://github.com/geekmomprojects/CubeSphere/blob/main/Orb8x8/WS2812/Pictures/OpenOrb8x8.jpg" height=300>
 
 
 Please note that these files are a work in progress and not a complete tutorial. The design files are subject to change. Designs
