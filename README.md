@@ -13,4 +13,7 @@ The designs, which exist in varying degrees of completion are:
 - [8x8 WS2812 matrices] (https://github.com/geekmomprojects/CubeSphere/tree/main/Orb8x8/WS2812) (challenging)
 - [8x8 SK9822 (APA102 equivalent) matrices](https://github.com/geekmomprojects/CubeSphere/tree/main/Orb8x8/SK9822) (intermediate)
 
+The 8x8 orbs both use the [Pixelblaze Controller](https://electromage.com/pixelblaze) and its associated sensor board to generate pixel-mapped LEDs patterns that are sound/motion responsive. The other orb designs use the [XIAO Sense nRF52840 board](https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html) with custom CircuitPython code to control the LEDs.
+
+For all designs, it is strongly recommended that you 3D print the cube interior connectors in PETG or other similarly strong filament. The exterior shell may be printed in PETG or PLA. You will need a well-tuned printer with good bed adhesion for this project, especially for the translucent diffusing tiles, as they require printing a large quantity of tiny parts.
 
