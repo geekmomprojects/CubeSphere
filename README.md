@@ -11,8 +11,8 @@ There are multiple versions of ths project which use off-the shelf matrices of d
 The designs, which exist in varying degrees of completion are:
 - [4x4 WS2812 matrices V1](https://github.com/geekmomprojects/CubeSphere/tree/main/Orb4x4) (challenging)
 - [4x4 WS2812 matrices V2 with 3D printed battery holder](https://github.com/geekmomprojects/CubeSphere/tree/main/Orb4x4_V2) (challenging)
-- [5x5 WS2812 matrices] (https://github.com/geekmomprojects/CubeSphere/tree/main/Orb5x5) (intermediate)
-- [8x8 WS2812 matrices] (https://github.com/geekmomprojects/CubeSphere/tree/main/Orb8x8/WS2812) (challenging)
+- [5x5 WS2812 matrices](https://github.com/geekmomprojects/CubeSphere/tree/main/Orb5x5) (intermediate)
+- [8x8 WS2812 matrices](https://github.com/geekmomprojects/CubeSphere/tree/main/Orb8x8/WS2812) (challenging)
 - [8x8 SK9822 (APA102 equivalent) matrices](https://github.com/geekmomprojects/CubeSphere/tree/main/Orb8x8/SK9822) (intermediate)
 
 The 8x8 orbs both use the [Pixelblaze Controller](https://electromage.com/pixelblaze) and its associated sensor board to generate pixel-mapped LEDs patterns that are sound/motion responsive. The other orb designs use the [XIAO Sense nRF52840 board](https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html) with custom CircuitPython code to control the LEDs.
