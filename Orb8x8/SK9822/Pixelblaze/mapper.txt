@@ -1,0 +1,69 @@
+// Maps the pixel locations of the cube sphere (an LED cube inscribed inside a translucent
+// sphere which pipes the LED light out to the sphere's surface). Cube side length (in pixels)
+// is "width."
+// Most of this algorithm is lifted directly from the Pixelblaze mapper code for a walled
+// cube by Ben Henke (see https://electromage.com/intro_to_mapping). The coordinates are
+// mapped to the surface of the sphere by generating Cartesian coordinates for the cube,
+// converting pixel coordinates to spherical values, and then setting rho for each pixel
+// to the radius of the circumscribed sphere while retaining theta and phi, then converting
+// back to Cartesian coordinates.
+function (pixelCount) {
+  width = 8
+
+  function sphericalToCartesian(rho, theta, phi) {
+    x = rho*Math.sin(phi)*Math.cos(theta)
+    y = rho*Math.sin(phi)*Math.sin(theta)
+    z = rho*Math.cos(phi)
+    return [x, y, z]
+  }
+  
+  function cartesianToSpherical(x, y, z) {
+    rho = Math.sqrt(x*x + y*y + z*z)
+    theta = Math.atan2(y,x)
+    phi = Math.acos(z/rho)
+    return [rho, theta, phi]
+  }
+
+  //generate a 2d matrix in 3d space
+  //targets is an array of source coordinates 0 = fixed, 1 = row, 2 = column
+  //e.g. [1,2,0] will generate rows = x, cols = y, and z is fixed (at zero)
+  //sign indicates direction so -2 is columns in reverse order
+  //offsets lets you translate the coordinates by some offset
+  function side(targets, offsets) {
+    var matrix = [], coords, row, col
+    for (i = 0; i < width * width; i++) {
+      row = Math.floor(i / width)
+      col = i % width
+      //col = row % 2 == 1 ? width - 1 - col : col //zigzag
+      coords = [0, row, col]
+      matrix.push(targets.map(function (target, index) {
+        var coord = coords[Math.abs(target)]
+        if (target < 0)
+          coord = width - 1 - coord
+        return coord + offsets[index]
+      }))
+    }
+    return matrix
+  }
+
+  var map = []
+  var gap = .75
+  var h = width/2-0.5
+  var hgap = h+gap
+  var R = Math.sqrt(3*h*h)
+  map = map.concat(side([2, 1, 0], [-h, -h, -hgap]))
+  map = map.concat(side([0, -2, 1], [hgap, -h, -h]))
+  map = map.concat(side([-2, 0, 1], [-h, -hgap, -h]))
+  map = map.concat(side([0, 2, 1], [-hgap, -h, -h]))
+  map = map.concat(side([-1, 0, 2], [-h, hgap, -h]))
+  map = map.concat(side([-1,-2,0],[-h,-h,hgap]))
+
+  for (i = 0; i < pixelCount; i++) {
+    sc = cartesianToSpherical(map[i][0],map[i][1],map[i][2])
+    cc = sphericalToCartesian(R, sc[1], sc[2])
+    map[i][0] = cc[0]
+    map[i][1] = cc[1]
+    map[i][2] = cc[2]
+  }
+  return map
+}
