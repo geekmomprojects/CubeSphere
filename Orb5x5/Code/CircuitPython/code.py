@@ -27,9 +27,9 @@ def orb5x5():
     Y = Matrix.Y
     Z = Matrix.Z
     npix = width*width
-    maxv = width-1 #largest coordinate valhe
+    maxv = width-1 #largest coordinate value
     #definition of matrix defaults to alternating rows
-    #The reference coodrinate frame for the orb is the one in which the
+    #The reference coordinate frame for the orb is the one in which the
     #XIAO X-axis is along the short board axis, the positive Y axis is along
     #the long axis with positive direction pointed towards the USB connector
     #and positive Z axis is above the top of the board
@@ -39,6 +39,16 @@ def orb5x5():
     left = Matrix([-gap, 0, 0], Z, Y, 3*npix, width)
     top = Matrix([maxv, 0, maxv+gap], Y, -X, 4*npix, width)
     back = Matrix([maxv, maxv+gap, maxv], -Z, -X, 5*npix, width)
+
+    # Alternate configuration for some 5x5 matricies that have a different
+    # orientation:
+    # front = Matrix([0, -gap, maxv], X, -Z, 0, width)
+    # right = Matrix([maxv + gap, maxv, maxv], -Z, -Y, 1*npix, width)
+    # bottom = Matrix([maxv, maxv, -gap], -X, -Y, 2*npix, width)
+    # left = Matrix([-gap, maxv, 0], Z, -Y, 3*npix, width)
+    # top = Matrix([0, 0, maxv+gap], Y, X, 4*npix, width)
+    # back = Matrix([0, maxv+gap, maxv], -Z, X, 5*npix, width)
+
     orb = Orb(5,[front, right, bottom, left, top, back],
                 ["front", "right", "bottom", "left", "top", "back"], pixels)
     return orb
